@@ -12,7 +12,7 @@ def num_of_handy(n, p, r):
 def overall_prob(generation, prob, expected):
     all_org = 2 ** generation  # Counting all the offsprings
     # The function summarizes probabilities of all suitable offsprings
-    return sum(num_of_handy(all_org, prob, i) for i in range(expected + 1))
+    return sum(num_of_handy(all_org, prob, i) for i in range(expected))
 
 generation, expect = [int(x) for x in input().split(' ')]
-print(1 - overall_prob(generation, 0.25, expect - 1))
+print(1 - overall_prob(generation, 0.25, expect))
