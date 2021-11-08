@@ -56,8 +56,29 @@ def edit_distance_alignment(string1, string2):
     return score_mat[len(str1) - 1][len(str2) - 1], aligned_1, aligned_2
 
 # Reading file
+def extract_sequence_from_input(file):
+    '''
+    Reading fasta format
+    :param fp: multiples string on different lines
+    :return: sequences as list
+    '''
+    sequences = []
+    result = ""
+    for line in file:
+        if ">" in line:
+            sequences.append(result)  # Appending sequence list with final seq
+            result = ""  # Initiation of a new seq
+        else:
+            if "\n" in line:
+                result += line[:len(line) - 1]  # Lengthening of sequence
+            else:
+                result += line
+    sequences.append(result)  # Appending list with last seq
+    sequences.remove('')
+    return sequences
+
 file = open('test.txt')
-lines = file.read().splitlines()
+lines = extract_sequence_from_input(file)
 str1 = lines[0]
 str2 = lines[1]
 
