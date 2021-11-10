@@ -25,5 +25,3 @@ def finding_pro_mot(ids):
 file = open('test.txt')
 ids = file.read().splitlines()
 finding_pro_mot(ids)
-
-
