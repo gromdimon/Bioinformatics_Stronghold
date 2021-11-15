@@ -54,4 +54,3 @@ def rna_protein(rna):
 # Reading file
 rna = input()
 print(rna_protein(rna))
-
