@@ -1,3 +1,5 @@
+# This code i found primarly in medium from Matt West
+
 def extract_sequence_from_input(file):
     '''
     Reading fasta format
