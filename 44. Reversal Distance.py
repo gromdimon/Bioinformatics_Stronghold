@@ -75,8 +75,8 @@ if __name__ == "__main__":
         input_lines = [line.rstrip() for line in lines]
     all_dist = []
     for idx in range(0, len(input_lines), 3):
-        P1 = tuple(map(int, input_lines[idx].split()))
-        P2 = tuple(map(int, input_lines[idx + 1].split()))
+        P1 = list(map(int, input_lines[idx].split()))
+        P2 = list(map(int, input_lines[idx + 1].split()))
 
         dist = reversal_distance(P1, P2)
         all_dist.append(dist)
