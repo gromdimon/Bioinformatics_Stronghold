@@ -1,3 +1,5 @@
+# This solution i've found here
+# https://github.com/egeulgen/Bioinformatics_Stronghold/blob/master/solutions/nkew.py
 class Node():
     def __init__(self, number, parent, name = None):
         self.number = number
